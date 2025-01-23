@@ -76,7 +76,17 @@ function sortColleagues(
   console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
   console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
   
-  
+
+    // Add an interest to a friend.
+  function addInterest(friend: Friend, interest: string): string[] {
+    if (!friend.interests) {
+        friend.interests = [];
+    }
+    friend.interests.push(interest);
+    return friend.interests;
+}
+
+console.log(addInterest(friends[0], 'Politics'));
   
 
   
